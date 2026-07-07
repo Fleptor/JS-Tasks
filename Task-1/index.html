@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task One - JS</title>
+	<style>
+	body {
+		border: 1px solid black;
+		min-height: 100dvh;
+		background-color: #f1f4f5;
+		padding: 20px;
+		}	
+	</style>
+</head>
+<body>
+	<!-- SECTION 1 -->
+    <div class="assignment-section">
+        <h2>Part 1: The Two Operands Calculator</h2>
+
+        <iframe srcdoc=`
+            <!DOCTYPE html>
+            <html>
+            <body>
+                <button onclick='showAlert()'>Trigger Part 2 Popup</button>
+                <script>
+                    function showAlert() {
+			let operation = prompt('Select desired operation (+, -, *, /)');
+			let num1 = prompt('Insert first number: ');
+			let num2 = prompt('Insert second number: ');
+			let answer = 0;
+			switch(operation) {
+				case '+':
+				answer = Number(num1) + Number(num2);	
+				break;
+			
+				case '-':
+				answer = Number(num1) - Number(num2);	
+				break;
+			
+				case '/':
+				answer = Number(num1) / Number(num2);	
+				break;
+			
+				case '*':
+				answer = Number(num1) * Number(num2);	
+				break;
+				
+				default: alert('Please select from the possible operations.');
+				return;
+			}
+			
+			alert('Your answer is: ' + answer);
+                    }
+                </script>
+            </body>
+            </html>
+        `></iframe>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="assignment-section">
+        <h2>Part 2: The Calculator App</h2>
+    </div>
+</body>
+</html>
