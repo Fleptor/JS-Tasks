@@ -108,7 +108,7 @@ function minInArray(array) {
     return minValue;
 }
 
-function sumArray(array) {
+function minInArray(array) {
     let minValue = 0;
     let i = 0;
     while(i < array.length) {
@@ -116,4 +116,189 @@ function sumArray(array) {
             minValue = array[i];
     }
     return minValue;
+}
+
+//15
+function removeFromArray(array, value) {
+    let arr = [];
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] !== value) {
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+}
+
+function removeFromArray(array, value) {
+    let i = 0;
+    let arr = [];
+    while(i < array.length) {
+        if(array[i] !== value) {
+            arr.push(array[i]);
+        }
+        i++;
+    }
+    return arr;
+}
+
+//16
+function oddArray(array) {
+    let arr = [];
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] % 2 !== 0) {
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+}
+
+function oddArray(array) {
+    let arr = [];
+    let i = 0;
+    while(i < array.length) {
+        if(array[i] % 2 !== 0) {
+            arr.push(array[i]);
+        }
+        i++;
+    }
+    return arr;
+}
+
+//17
+function aveArray(array) {
+    let average = 0;
+    for(let i = 0; i < array.length; i++) {
+       average += array[i]; 
+    }
+
+    average /= array.length;
+    return average;
+}
+
+function aveArray(array) {
+    let average = 0;
+    let i = 0;
+    while (i < array.length) {
+       average += array[i]; 
+       i++;
+    }
+
+    average /= array.length;
+    return average;
+}
+
+//18
+function shortestInArray(array) {
+    let minChars = array[0].length;
+    let shortestIndex = 0;
+    for(let i = 1; i < array.length; i++) {
+        if(array[i].length < minChars) {
+            minChars = array[i].length;
+            shortestIndex = i;
+        }
+    }
+    return array[shortestIndex];
+}
+
+function shortestInArray(array) {
+    let minChars = array[0].length;
+    let shortestIndex = 0;
+    let i = 0;
+    while(i < array.length) {
+        if(array[i].length < minChars) {
+            minChars = array[i].length;
+            shortestIndex = i;
+        }
+        i++;
+    }
+    return array[shortestIndex];
+}
+
+//19
+function repeatCharTimes(string, character) {
+    let repeatCount = 0;
+    for(let i = 0; i < string.length; i++) {
+        if(string[i] === character)
+            repeatCount++;
+    }
+    return repeatCount;
+}
+
+function repeatCharTimes(string, character) {
+    let repeatCount = 0;
+    let i = 0;
+    while(i < string.length) {
+        if(string[i] === character) {
+            repeatCount++;
+        }
+        i++;
+    }
+    return repeatCount;
+}
+
+//20
+function evenIndexOddLength(array) {
+    let arr = [];
+    for(let i = 0; i < array.length; i++) {
+        if((i % 2 === 0) && (array[i].length % 2 !== 0)) {
+            arr.push(array[i]); }
+    }    
+
+    return arr;
+}
+
+function evenIndexOddLength(array) {
+    let arr = [];
+    let i = 0;
+
+    while(i < array.length) {
+        if((i % 2 === 0) && (array[i].length % 2 !== 0)) {
+            arr.push(array[i]);
+        }
+        i++;
+    }    
+
+    return arr;
+}
+
+//21
+function powerElementIndex(array) {
+    let arr = [];
+    for(let i = 0; i < array.length; i++) {
+        arr.push(array[i] ** i);
+    }
+    return arr;
+}
+
+function powerElementIndex(array) {
+    let arr = [];
+    let i = 0;
+    while(i < array.length) {
+        arr.push(array[i] ** i);
+        i++;
+    }
+    return arr;
+}
+
+//22
+function evenNumberEvenIndex(array) {
+    let arr = [];
+    for(let i = 0; i < array.length; i++) {
+        if((i % 2 === 0) && (array[i] % 2 === 0)) {
+            arr.push(array[i]); }
+    }    
+
+    return arr;
+}
+
+function evenNumberEvenIndex(array) {
+    let arr = [];
+    let i = 0;
+    while(i < array.length) {
+        if((i % 2 === 0) && (array[i] % 2 === 0)) {
+            arr.push(array[i]); }
+        i++;
+    }    
+
+    return arr;
 }
